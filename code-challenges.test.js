@@ -21,6 +21,25 @@ const secretCodeWord2 = "Gobbledygook"
 const secretCodeWord3 = "Eccentric"
 // Expected output: "3cc3ntr1c"
 
+const secret = (string, arr) => {
+    const convert = ["4","3","1","0"]
+    const arr = string.split("")
+    const arr2 = arr.map((item, index) => {
+        if (item === "a") {
+            return convert[0]
+            } else if (item === "e") {
+                return convert[1]
+                } else if (item === "i") {
+                    return convert[2]
+                    } else if (item === "o") {
+                        return convert[3]
+                        }
+                        })
+                        return arr2.join("")
+                        }
+                    
+console.log(secret(Lackadasical,arr));
+
 // b) Create the function that makes the test pass.
 
 // --------------------2) Create a function that takes in an array of words and a single letter and returns an array of all the words containing that particular letter.
